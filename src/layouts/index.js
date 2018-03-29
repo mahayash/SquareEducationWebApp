@@ -7,6 +7,7 @@ import './index.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
+    {/* this is used to change the value in head tag */}
     <Helmet
       title="Gatsby Default Starter"
       meta={[
@@ -14,7 +15,9 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+    {/* this is the header*/}
     <Header />
+    {/* this is the content body page*/}
     <div
       style={{
         margin: '0 auto',

@@ -8,24 +8,39 @@ const Header = () => (
       marginBottom: '1.45rem',
     }}
   >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
+    <div>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
             color: 'white',
             textDecoration: 'none',
-          }}
-        >
-          Gatsby
+          }}>
+          Square Education
         </Link>
+        <h4 style={{
+          float: "right"
+        }}>
+          <Link to="/about/" style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}> About
+</Link>
+          <Link to="/team" style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}> Team
+</Link>
+          <Link to="/contact" style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}> Contact
+</Link>
+        </h4>
       </h1>
+
+
+
     </div>
   </div>
 )
