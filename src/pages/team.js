@@ -1,11 +1,30 @@
 import React from "react"
 
-const Team = () => (
+export default function Team({ data }) {
 
-    <h1>
-        Thi is my team page
-        </h1>
+    const { frontmatter, html } = data.allMarkdownRemark.edges[0].node;
 
-)
+    return (
+        <div>
+            <h1>
+                {`Title : ${frontmatter.title}`}
+            </h1>
+            <p dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+    )
+}
 
-export default Team;
+export const teamQuery = graphql`
+    query teamDataQuery {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/team.md/"}}) {
+          edges {
+            node {
+              html
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+`

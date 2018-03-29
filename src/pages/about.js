@@ -3,16 +3,16 @@ import Helmet from "react-helmet";
 
 export default function About({ data }) {
 
-    const { markdownRemark: post } = data;
+    const { frontmatter, html } = data.allMarkdownRemark.edges[0].node;
 
     return (
         <div>
-            <Helmet title={`Title ${post.frontmatter.title}`} />
+            <Helmet title={`Title ${frontmatter.title}`} />
             <div>
                 <h1>
-                    {post.frontmatter.title}
+                    {frontmatter.title}
                 </h1>
-                <p dangerouslySetInnerHTML={{ __html: post.html }} />
+                <p dangerouslySetInnerHTML={{ __html: html }} />
             </div>
         </div>
     )
@@ -20,13 +20,17 @@ export default function About({ data }) {
 
 export const aboutQuery = graphql`
     query aboutDataQuery {
-        markdownRemark {
-            html 
-            frontmatter {
-                title 
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about.md/"}}) {
+          edges {
+            node {
+              html
+              frontmatter {
+                title
+              }
             }
+          }
         }
-    }
+      }
 `;
 
 

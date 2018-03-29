@@ -26,7 +26,7 @@ const Header = () => (
             textDecoration: 'none',
           }}> About
 </Link>
-          <Link to="/team" style={{
+          <Link to="/team/" style={{
             color: 'white',
             textDecoration: 'none',
           }}> Team
