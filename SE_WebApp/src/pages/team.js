@@ -14,17 +14,17 @@ export default function Team({ data }) {
     )
 }
 
-export const teamQuery = graphql`
-    query teamDataQuery {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/team.md/"}}) {
-          edges {
-            node {
-              html
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-`
+// export const teamQuery = graphql`
+//     query teamDataQuery {
+//         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/team.md/"}}) {
+//           edges {
+//             node {
+//               html
+//               frontmatter {
+//                 title
+//               }
+//             }
+//           }
+//         }
+//       }
+// `
