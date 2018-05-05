@@ -7,25 +7,29 @@ const NavigationBar = () => (
   <Navbar inverse collapseOnSelect fixedTop>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#brand">React-Bootstrap</a>
+        <a href="#brand">Square Education</a>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav>
-        <NavItem eventKey={1} href="#">
-          Link
-        </NavItem>
-        <NavItem eventKey={2} href="#">
-          Link
-        </NavItem>
-      </Nav>
       <Nav pullRight>
+      <NavItem eventKey={0} href="#">
+          Courses
+        </NavItem>
         <NavItem eventKey={1} href="#">
-          Link Right
+          Online
         </NavItem>
         <NavItem eventKey={2} href="#">
-          Link Right
+        Forms
+        </NavItem>
+        <NavItem eventKey={2} href="#">
+        Download
+        </NavItem>
+        <NavItem eventKey={3} href="#">
+          Team
+        </NavItem>
+        <NavItem eventKey={4} href="#">
+          Contact 
         </NavItem>
       </Nav>
     </Navbar.Collapse>

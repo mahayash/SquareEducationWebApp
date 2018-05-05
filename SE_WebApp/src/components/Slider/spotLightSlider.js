@@ -4,7 +4,7 @@ import './spotLightStyle.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-export default class SimpleSlider extends Component {
+export default class SpotLightSlider extends Component {
   render() {
     const settings = {
       dots: true,

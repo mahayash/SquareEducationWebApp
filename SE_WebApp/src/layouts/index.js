@@ -9,10 +9,10 @@ const TemplateWrapper = ({ children }) => (
   <div>
     {/* this is used to change the value in head tag */}
     <Helmet
-      title="Gatsby Default Starter"
+      title="Square Education"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'School Section & Grammar' },
+        { name: 'keywords', content: 'School, Tutoring, Grammar, English Grammar at Mira Bhayander' },
       ]}
     />
     {/* this is the header*/}
@@ -22,7 +22,7 @@ const TemplateWrapper = ({ children }) => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 1280,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
