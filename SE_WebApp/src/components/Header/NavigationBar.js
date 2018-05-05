@@ -1,24 +1,25 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import 'bootstrap/dist/css/bootstrap.css'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
-const Header = () => (
-  <Navbar inverse>
+const NavigationBar = () => (
+  <Navbar inverse collapseOnSelect fixedTop>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Square Education
-        </Link>
+        <a href="#brand">React-Bootstrap</a>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
+      <Nav>
+        <NavItem eventKey={1} href="#">
+          Link
+        </NavItem>
+        <NavItem eventKey={2} href="#">
+          Link
+        </NavItem>
+      </Nav>
       <Nav pullRight>
         <NavItem eventKey={1} href="#">
           Link Right
@@ -30,6 +31,7 @@ const Header = () => (
     </Navbar.Collapse>
   </Navbar>
 )
+
 // const Header = () => (
 //   <div
 //     style={{
@@ -89,4 +91,4 @@ const Header = () => (
 //   </div>
 // )
 
-export default Header
+export default NavigationBar
