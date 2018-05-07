@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 import './multiContentStyle.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import StudentCard from '../Cards/studentCard'
 
 export default class MultiContentSlider extends Component {
   render() {
     let settings = {
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 5,
+      slidesToScroll: 5,
       initialSlide: 0,
+      rows: 1,
+      slidesPerRow: 1,
+      arrows: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -50,14 +52,15 @@ export default class MultiContentSlider extends Component {
 
     return (
       <div>
-        <h1> {displayIn} </h1>
+        <span className="cardSliderTitle"> {displayIn} </span>
         <Slider {...settings}>
           {displayValueItems.map(function(slides) {
             return (
-              <h2>
-                `{slides.node.studentName.first} +{' '}
-                {slides.node.studentName.last}`
-              </h2>
+              // <h2 className="cards" >
+              //   `{slides.node.studentName.first} +{' '}
+              //   {slides.node.studentName.last}`
+              // </h2>
+              <StudentCard studentCardInfo={slides.node} key={slides.node.id} />
             )
           })}
         </Slider>

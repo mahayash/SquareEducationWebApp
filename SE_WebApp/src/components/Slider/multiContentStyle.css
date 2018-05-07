@@ -1,5 +1,5 @@
-h2 {
-  background-color: brown;
-  height: 200px;
-  margin: 20px;
+.cardSliderTitle{
+  margin: 10px;
+  font-weight: 300;
+  font-size: 35px;
 }

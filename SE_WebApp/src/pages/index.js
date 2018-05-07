@@ -31,9 +31,18 @@ export default function IndexPage({ data }) {
     /** Pre-defined  */
     <div>
       <SpotLightSlider />
-      <MultiContentSlider displayValue={topScorer} displayInCategory={'Top Scorer'} />
-      <MultiContentSlider displayValue={subjectHighest} displayInCategory={'Subject Highest'} />
-      <MultiContentSlider displayValue={growthAchieved} displayInCategory={'Growth Achieved'} />
+      <MultiContentSlider
+        displayValue={topScorer}
+        displayInCategory={'Top Scorer'}
+      />
+      <MultiContentSlider
+        displayValue={subjectHighest}
+        displayInCategory={'Subject Highest'}
+      />
+      <MultiContentSlider
+        displayValue={growthAchieved}
+        displayInCategory={'Growth Achieved'}
+      />
     </div>
   )
 }

@@ -12,19 +12,21 @@ const TemplateWrapper = ({ children }) => (
       title="Square Education"
       meta={[
         { name: 'description', content: 'School Section & Grammar' },
-        { name: 'keywords', content: 'School, Tutoring, Grammar, English Grammar at Mira Bhayander' },
+        {
+          name: 'keywords',
+          content:
+            'School, Tutoring, Grammar, English Grammar at Mira Bhayander',
+        },
       ]}
     />
     {/* this is the header*/}
     <NavigationBar />
     {/* this is the content body page*/}
-    
+
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 1280,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
+        width: '100%',
       }}
     >
       {children()}

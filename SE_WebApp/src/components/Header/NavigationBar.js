@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 const NavigationBar = () => (
-  <Navbar inverse collapseOnSelect fixedTop>
+  <Navbar inverse collapseOnSelect fixedTop style={{ width: '100%' }}>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#brand">Square Education</a>
@@ -13,23 +13,23 @@ const NavigationBar = () => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
-      <NavItem eventKey={0} href="#">
+        <NavItem eventKey={0} href="#">
           Courses
         </NavItem>
         <NavItem eventKey={1} href="#">
           Online
         </NavItem>
         <NavItem eventKey={2} href="#">
-        Forms
+          Forms
         </NavItem>
         <NavItem eventKey={2} href="#">
-        Download
+          Download
         </NavItem>
         <NavItem eventKey={3} href="#">
           Team
         </NavItem>
         <NavItem eventKey={4} href="#">
-          Contact 
+          Contact
         </NavItem>
       </Nav>
     </Navbar.Collapse>
