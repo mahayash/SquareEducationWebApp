@@ -2,22 +2,22 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 import './multiContentStyle.css'
 import StudentCard from '../Cards/studentCard'
+import TestimonialCard from '../Cards/testimonialCard'
 
 export default class MultiContentSlider extends Component {
   render() {
     let settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToScroll: 1,
       initialSlide: 0,
       rows: 1,
-      slidesPerRow: 1,
-      arrows: true,
+      swipeToSlide: true,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 960,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -43,28 +43,40 @@ export default class MultiContentSlider extends Component {
       ],
     }
     let displayValueItems = this.props.displayValue
-    let displayIn = this.props.displayInCategory
-    // displayValueItems.forEach(element => {
-    //   console.log`${element.node.studentName.first} ${
-    //     element.node.studentName.last
-    //   }`
-    // })
+    let displayInTitle = this.props.displayInCategory
 
-    return (
-      <div>
-        <span className="cardSliderTitle"> {displayIn} </span>
-        <Slider {...settings}>
-          {displayValueItems.map(function(slides) {
-            return (
-              // <h2 className="cards" >
-              //   `{slides.node.studentName.first} +{' '}
-              //   {slides.node.studentName.last}`
-              // </h2>
-              <StudentCard studentCardInfo={slides.node} key={slides.node.id} />
-            )
-          })}
-        </Slider>
-      </div>
-    )
+    if (displayInTitle === 'Testimonials') {
+      return (
+        <div>
+          <span className="cardSliderTitle"> {displayInTitle} </span>
+          <Slider {...settings}>
+            {displayValueItems.map(function(slides) {
+              return (
+                <TestimonialCard
+                  testimonialCardInfo={slides.node}
+                  key={slides.node.id}
+                />
+              )
+            })}
+          </Slider>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <span className="cardSliderTitle"> {displayInTitle} </span>
+          <Slider {...settings}>
+            {displayValueItems.map(function(slides) {
+              return (
+                <StudentCard
+                  studentCardInfo={slides.node}
+                  key={slides.node.id}
+                />
+              )
+            })}
+          </Slider>
+        </div>
+      )
+    }
   }
 }
