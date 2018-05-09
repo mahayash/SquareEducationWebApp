@@ -42,6 +42,43 @@ export default class MultiContentSlider extends Component {
         },
       ],
     }
+
+    let testimonialSettings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      rows: 1,
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    }
     let displayValueItems = this.props.displayValue
     let displayInTitle = this.props.displayInCategory
 
@@ -49,7 +86,7 @@ export default class MultiContentSlider extends Component {
       return (
         <div>
           <span className="cardSliderTitle"> {displayInTitle} </span>
-          <Slider {...settings}>
+          <Slider {...testimonialSettings}>
             {displayValueItems.map(function(slides) {
               return (
                 <TestimonialCard

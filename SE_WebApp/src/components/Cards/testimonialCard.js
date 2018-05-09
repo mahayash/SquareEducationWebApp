@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './studentCard.css'
+import './cardStyle.css'
 
 export default class TestimonialCard extends Component {
   //let testimonialCardInfo = this.pro
@@ -8,15 +8,19 @@ export default class TestimonialCard extends Component {
     let cardInfo = this.props.testimonialCardInfo
 
     return (
-      <div id="studentCardContainter">
-        <div className="img-wrapper">
-          <img src="" />
-        </div>
-        <div className="details">
-          <h4>{`${cardInfo.parentName.first} ${
-            cardInfo.parentName.last
-          }`}</h4>
-          <p>{`${cardInfo.testimonial} - ${cardInfo.fromSquareEducation}`}</p>
+      <div id="testimonialCardDetails">
+        <img src="" />
+        <div>
+          <p id="testimonialText">{`${cardInfo.testimonial}`}</p>
+          <div id="testimonailParent">
+            <div>{`${cardInfo.parentName.first} ${
+              cardInfo.parentName.last
+            }`}</div>
+            <span>{`(${cardInfo.relationWithStudent} of ${
+              cardInfo.studentName.first
+            } ${cardInfo.studentName.last})`}</span>
+          </div>
+          <p id="testimonialSquare">{`${cardInfo.fromSquareEducation}`}</p>
         </div>
       </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.css'
-//import './index.css'
+import './home.css'
 import NavigationBar from '../components/Header/NavigationBar'
 
 const TemplateWrapper = ({ children }) => (
@@ -23,14 +23,14 @@ const TemplateWrapper = ({ children }) => (
     <NavigationBar />
     {/* this is the content body page*/}
 
-    <div
-      style={{
-        margin: '0 auto',
-        width: '100%',
-      }}
+    <div>{children()}</div>
+    <nav
+      className="navbar navbar-default navbar-bottom"
+      role="navigation"
+      style={{ marginBottom: 0 }}
     >
-      {children()}
-    </div>
+      <h4>Powered by Panthrax Digital</h4>
+    </nav>
   </div>
 )
 
