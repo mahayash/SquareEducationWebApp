@@ -23,7 +23,7 @@ const NavigationBar = () => (
           <Link to="/form"> Forms</Link>
         </NavItem>
         <NavItem eventKey={3}>
-          <Link to="/download"> Download</Link>
+          <Link to="/students"> Students</Link>
         </NavItem>
         <NavItem eventKey={4}>
           <Link to="/team"> Team</Link>

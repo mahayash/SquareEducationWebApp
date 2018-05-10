@@ -27,7 +27,9 @@ export default class StudentCard extends Component {
           <h4>{`${cardInfo.studentName.first} ${
             cardInfo.studentName.last
           }`}</h4>
-          <p>{`${cardInfo.courses} - ${cardInfo.school}`}</p>
+          <p style={{ marginTop: '-5px'}}>{`${
+            cardInfo.courses
+          } - ${cardInfo.school}`}</p>
         </div>
       </div>
     )

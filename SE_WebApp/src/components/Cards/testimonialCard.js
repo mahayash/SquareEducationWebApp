@@ -9,18 +9,23 @@ export default class TestimonialCard extends Component {
 
     return (
       <div id="testimonialCardDetails">
-        <img src="" />
+        <img
+          src={cardInfo.parentImagePath}
+          style={{ width: '100px', height: '100px' }}
+        />
         <div>
-          <p id="testimonialText">{`${cardInfo.testimonial}`}</p>
           <div id="testimonailParent">
-            <div>{`${cardInfo.parentName.first} ${
+            <div className="titleText">{`${cardInfo.parentName.first} ${
               cardInfo.parentName.last
             }`}</div>
-            <span>{`(${cardInfo.relationWithStudent} of ${
-              cardInfo.studentName.first
-            } ${cardInfo.studentName.last})`}</span>
+            <span className="titleSubText">{`${
+              cardInfo.relationWithStudent
+            } of ${cardInfo.studentName.first} ${
+              cardInfo.studentName.last
+            }`}</span>
+            <p id="testimonialSquare">{`${cardInfo.fromSquareEducation}`}</p>
           </div>
-          <p id="testimonialSquare">{`${cardInfo.fromSquareEducation}`}</p>
+          <p id="testimonialText">{`"${cardInfo.testimonial}"`}</p>
         </div>
       </div>
     )
