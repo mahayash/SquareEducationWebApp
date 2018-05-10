@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap/dist/css/bootstrap.css'
 import './home.css'
 import NavigationBar from '../components/Header/NavigationBar'
 
@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     {/* this is used to change the value in head tag */}
     <Helmet
-      title="Square Education"
+      title="Square Education Institute"
       meta={[
         { name: 'description', content: 'School Section & Grammar' },
         {
@@ -20,17 +20,14 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     {/* this is the header*/}
-    <NavigationBar />
-    {/* this is the content body page*/}
-
-    <div>{children()}</div>
-    <nav
-      className="navbar navbar-default navbar-bottom"
-      role="navigation"
-      style={{ marginBottom: 0 }}
-    >
-      <h4>Powered by Panthrax Digital</h4>
-    </nav>
+    <div id="indexContainer">
+      <NavigationBar />
+      <div id="indexBody">{children()}</div>
+      <br />
+      <div id="indexFooter">
+        <h4>Powered by Panthrax Digital</h4>
+      </div>
+    </div>
   </div>
 )
 

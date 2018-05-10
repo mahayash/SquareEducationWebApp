@@ -15,6 +15,7 @@ export default class MultiContentSlider extends Component {
       initialSlide: 0,
       rows: 1,
       swipeToSlide: true,
+      arrows :false,
       responsive: [
         {
           breakpoint: 960,
@@ -52,6 +53,7 @@ export default class MultiContentSlider extends Component {
       initialSlide: 0,
       rows: 1,
       swipeToSlide: true,
+      arrows :false,
       responsive: [
         {
           breakpoint: 960,
@@ -85,7 +87,7 @@ export default class MultiContentSlider extends Component {
     if (displayInTitle === 'Testimonials') {
       return (
         <div>
-          <span className="cardSliderTitle"> {displayInTitle} </span>
+          <div className="cardSliderTitle"> {displayInTitle} </div>
           <Slider {...testimonialSettings}>
             {displayValueItems.map(function(slides) {
               return (
@@ -101,7 +103,7 @@ export default class MultiContentSlider extends Component {
     } else {
       return (
         <div>
-          <span className="cardSliderTitle"> {displayInTitle} </span>
+          <div className="cardSliderTitle"> {displayInTitle} </div>
           <Slider {...settings}>
             {displayValueItems.map(function(slides) {
               return (

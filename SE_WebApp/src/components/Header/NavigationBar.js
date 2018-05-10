@@ -4,32 +4,32 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 const NavigationBar = () => (
-  <Navbar inverse collapseOnSelect fixedTop style={{ width: '100%' }}>
+  <Navbar collapseOnSelect fixedTop inverse >
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#brand">Square Education</a>
+        <Link to="/"> Square Education Institute</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
-        <NavItem eventKey={0} href="#">
-          Courses
+        <NavItem eventKey={0}>
+          <Link to="/courses/"> Courses</Link>
         </NavItem>
-        <NavItem eventKey={1} href="#">
-          Online
+        <NavItem eventKey={1}>
+          <Link to="/online"> Online</Link>
         </NavItem>
-        <NavItem eventKey={2} href="#">
-          Forms
+        <NavItem eventKey={2}>
+          <Link to="/form"> Forms</Link>
         </NavItem>
-        <NavItem eventKey={2} href="#">
-          Download
+        <NavItem eventKey={3}>
+          <Link to="/download"> Download</Link>
         </NavItem>
-        <NavItem eventKey={3} href="#">
-          Team
+        <NavItem eventKey={4}>
+          <Link to="/team"> Team</Link>
         </NavItem>
-        <NavItem eventKey={4} href="#">
-          Contact
+        <NavItem eventKey={5}>
+          <Link to="/contact"> Contact</Link>
         </NavItem>
       </Nav>
     </Navbar.Collapse>

@@ -11,12 +11,14 @@
 #studentCardContainter > h2 {
   padding: 10px;
   color: white;
-  background: #3e4fb2;
+  background: #5E35B1;
   margin: 0px;
-  font-weight: 300;
-  text-align: left;
+  font-weight: 100;
+  text-align: center;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  
+  /* font-family: 'Roboto', sans-serif; */
 }
 #studentCardContainter > .img-wrapper {
   padding: 0;
@@ -24,16 +26,15 @@
   height: 200px;
 }
 #studentCardContainter > .details {
-  color: white;
+  color: black;
   padding: 1px;
+  font-weight: 500px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  background: #3e4fb2;
-  margin: 0px;
+  background: white;
 }
 
 #testimonialCardDetails {
-  width: 400px;
   height: 175px;
   background: white;
   position: relative;

@@ -18,20 +18,20 @@ export default function About({ data }) {
     )
 }
 
-// export const aboutQuery = graphql`
-//     query aboutDataQuery {
-//         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about.md/"}}) {
-//           edges {
-//             node {
-//               html
-//               frontmatter {
-//                 title
-//               }
-//             }
-//           }
-//         }
-//       }
-// `;
+export const aboutQuery = graphql`
+    query aboutDataQuery {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about.md/"}}) {
+          edges {
+            node {
+              html
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+`;
 
 
 

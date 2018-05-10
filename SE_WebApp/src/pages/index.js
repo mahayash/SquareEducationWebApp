@@ -34,6 +34,7 @@ export default function IndexPage({ data }) {
     /** Pre-defined  */
     <div>
       <SpotLightSlider />
+      <br />
       <MultiContentSlider
         displayValue={topScorer}
         displayInCategory={'Top Scorer'}
